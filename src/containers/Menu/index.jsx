@@ -23,10 +23,10 @@ export function Menu() {
   const queryParams = new URLSearchParams(search);
 
   const [activeCategory, setActiveCategory] = useState(() => {
-    const categoryId = +queryParams.get('categoria');
+    const categoryId = queryParams.get('categoria');
 
     if (categoryId) {
-      return categoryId;
+      return categoryId === '0' ? 0 : categoryId;
     }
     return 0;
   });
@@ -57,16 +57,21 @@ export function Menu() {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(search);
-    const categoryId = +queryParams.get('categoria');
-    // eslint-disable-next-line
-    setActiveCategory(categoryId || 0);
+    const categoryId = queryParams.get('categoria');
+
+    if (categoryId === '0' || !categoryId) {
+      // eslint-disable-next-line
+      setActiveCategory(0);
+    } else {
+      setActiveCategory(categoryId);
+    }
   }, [search]);
 
   const filteredProducts =
     activeCategory === 0
       ? products
       : products.filter(
-          (product) => Number(product.category_id) === Number(activeCategory),
+          (product) => String(product.category_id) === String(activeCategory),
         );
 
   // useEffect(() => {
