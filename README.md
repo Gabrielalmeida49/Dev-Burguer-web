@@ -1,11 +1,16 @@
 # 🍔 Dev Burguer - Front End
 
 <p align="center">
-  <img src="https://shields.io" alt="React" />
-  <img src="https://shields.io" alt="Vite" />
-  <img src="https://shields.io" alt="Styled Components" />
-  <img src="https://shields.io" alt="React Router" />
-  <img src="https://shields.io" alt="Render" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components" />
+  <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router" />
+  <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white" alt="Axios" />
+  <img src="https://img.shields.io/badge/Context_API-3178C6?style=for-the-badge&logo=react&logoColor=white" alt="Context API" />
+  <img src="https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white" alt="React Hook Form" />
+  <img src="https://img.shields.io/badge/Yup-111827?style=for-the-badge&logoColor=white" alt="Yup" />
+  <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" />
 </p>
 
 O **Dev Burguer** é um ecossistema completo de cardápio digital, checkout de pagamentos e gerenciamento de pedidos para uma hamburgueria. Ele foi desenvolvido como uma Single Page Application (SPA) robusta e escalável, totalmente conectada a uma API REST com rotas autenticadas, carrinho de compras e fluxos de validação em tempo real.
