@@ -71,11 +71,11 @@ Como a aplicação é Full-Stack e está dividida em microsserviços, você pode
 Se você deseja baixar e executar este repositório na sua máquina, siga os passos abaixo:
 1. Clone o repositório do Front-end:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/Gabrielalmeida49/Dev-Burguer-web.git
    ```
 2. Entre na pasta do projeto:
    ```bash
-   cd DEV-BURGUER-FRONT-END
+   cd: dev-burguer-front-end
    ```
 3. Instale todas as dependências necessárias utilizando o pnpm:
    ```bash
