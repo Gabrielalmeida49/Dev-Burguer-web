@@ -16,7 +16,6 @@ import {
 export function Menu() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  // const [filteredProducts, setFilteredProducts] = useState([]);
 
   const navigate = useNavigate();
   const { search } = useLocation();
@@ -58,8 +57,13 @@ export function Menu() {
   useEffect(() => {
     const queryParams = new URLSearchParams(search);
     const categoryId = +queryParams.get('categoria');
-    // eslint-disable-next-line
-    setActiveCategory(categoryId || 0);
+
+    if (categoryId !== null && categoryId !== undefined) {
+      // eslint-disable-next-line
+      setActiveCategory(Number(categoryId));
+    } else {
+      setActiveCategory(0);
+    }
   }, [search]);
 
   const filteredProducts =
@@ -68,17 +72,6 @@ export function Menu() {
       : products.filter(
           (product) => Number(product.category_id) === Number(activeCategory),
         );
-
-  // useEffect(() => {
-  //   if (activeCategory === 0) {
-  //     setFilteredProducts(products);
-  //   } else {
-  //     const newFilteredProducts = products.filter(
-  //       (product) => product.category_id === activeCategory,
-  //     );
-  //     setFilteredProducts(newFilteredProducts);
-  //   }
-  // }, [products, activeCategory]);
 
   return (
     <Container>
@@ -95,18 +88,9 @@ export function Menu() {
           <CategoryButton
             key={category.id}
             $isActiveCategory={category.id === activeCategory}
-            onClick={() => {
-              navigate(
-                {
-                  pathname: '/cardapio',
-                  search: `?categoria=${category.id}`,
-                },
-                {
-                  replace: true,
-                },
-              );
-              setActiveCategory(category.id);
-            }}
+            style={{ position: 'relative', zIndex: 9999, cursor: 'pointer' }}
+            to={`/cardapio?categoria=${category.id}`}
+            replace
           >
             {category.name}
           </CategoryButton>
